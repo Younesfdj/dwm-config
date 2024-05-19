@@ -13,7 +13,4 @@ main() {
 . /home/younes/.suckless/dwm/statusbar/_clock.sh ;
 }
 
-while true;
-    do xsetroot -name "$(main | tr "\n" " ")"
-        sleep 500;
-done;
+xsetroot -name "$(main | tr "\n" " ")"

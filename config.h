@@ -22,7 +22,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"sh", "/home/younes/.suckless/dwm/autostart.sh", NULL,
-	"sh", "/home/younes/.suckless/dwm/statusbar/statusbar.sh", NULL,
+	"sh", "-c","while :; do . /home/younes/.suckless/dwm/statusbar/statusbar.sh -; sleep 3; done",NULL,
 	NULL /* terminate */
 };
 

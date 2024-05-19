@@ -12,4 +12,4 @@ else
     VOLSTATE="🔊"
 fi
 
-echo " ${VOL}% ${VOLSTATE} | "
+echo " ${VOL}% ${VOLSTATE} |"
