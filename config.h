@@ -20,6 +20,8 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
+/* scripts that run when starting */
+
 static const char *const autostart[] = {
 	"sh", "/home/younes/.suckless/dwm/autostart.sh", NULL,
 	"sh", "-c","while :; do . /home/younes/.suckless/dwm/statusbar/statusbar.sh -; sleep 3; done",NULL,
@@ -98,6 +100,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_semicolon, focusmon,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_semicolon, tagmon,      {.i = +1 } },
+	{0,								XK_Print,  spawn,          SHCMD("scrot") },
 	TAGKEYS(                        XK_ampersand,              0)
 	TAGKEYS(                        XK_eacute,                 1)
 	TAGKEYS(                        XK_quotedbl,               2)
