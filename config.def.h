@@ -7,8 +7,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10","fontawesome:size=12" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrains Mono:size=11","fontawesome:size=12" };
+static const char dmenufont[]       = "JetBrains Mono:size=11";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#282a36";
 static const char col_gray3[]       = "#96b5b4";
@@ -21,7 +21,6 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"sh", "/home/younes/.suckless/dwm/autostart.sh", NULL,
 	"sh", "-c","while :; do . /home/younes/.suckless/dwm/statusbar/statusbar.sh -; sleep 3; done",NULL,
 	NULL /* terminate */
 };
@@ -98,6 +97,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_semicolon, focusmon,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_semicolon, tagmon,      {.i = +1 } },
+	{0,								XK_Print,  spawn,          SHCMD("scrot") },
 	TAGKEYS(                        XK_ampersand,              0)
 	TAGKEYS(                        XK_eacute,                 1)
 	TAGKEYS(                        XK_quotedbl,               2)

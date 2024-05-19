@@ -19,4 +19,4 @@ case "$clock" in
 esac
 
 
-date "+%Y %b %d (%a) $icon%I:%M%p"
+date "+%b %d (%a) $icon %I:%M%p"
