@@ -65,7 +65,7 @@ static const Layout layouts[] = {
 // manipulate volume
 static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
 static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
-static const char *mutevol[]    = { "/usr/bin/amixerl", "set", "Master", "0%", NULL };
+static const char *mutevol[]    = { "/usr/bin/amixer", "set", "Master", "0%", NULL };
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
