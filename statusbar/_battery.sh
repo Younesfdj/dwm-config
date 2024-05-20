@@ -15,7 +15,7 @@ for battery in /sys/class/power_supply/BAT?*; do
 	if [ $capacity -le 100 ]; then
 		status="󰁹"
 		if [ $capacity -le 75 ]; then
-			status="󰂀"
+			status="󰁿"
 			if [ $capacity -le 50 ]; then
 				status="󰁿"
 				if [ $capacity -le 25 ]; then
